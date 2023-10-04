@@ -1,0 +1,21 @@
+<% let x = 21, y = Math.random() %>
+<html>
+    <head>
+        <title>
+            Formulário <%=x%>
+        </title>
+        <script>
+            console.log("Este log foi feito no navegador")
+        </script>
+    </head>
+    <% console.log("Este log foi feito onde?") %>
+    <body>
+        <p>Teste <%=y%></p>
+        <form action="/ola" method="get">
+            <label>Escreva seu nome:</label>
+            <input type="text" name="nome">
+            <input type="submit">
+        </form>
+        <h1><%=z%></h1>
+    </body>
+</html>
