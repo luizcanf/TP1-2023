@@ -16,10 +16,11 @@ app.get('/acertei', (req, res) => {
    if(num == numPedido){
     console.log("O número escolhido está correto")
    }
-else if (numPedido > num || numPedido < num){
+else if (numPedido > num){
 console.log("O número escolhido é maior do que o número sorteado")
 
 }
+else if ()
     res.render('index', {})
 })
 
