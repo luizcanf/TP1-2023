@@ -1,4 +1,4 @@
-
+var resultado
 const express = require('express')
 
 const app = express()
