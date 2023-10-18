@@ -16,16 +16,13 @@ app.get('/acertei', (req, res) => {
 
    if(num == numPedido){
     resultado ="O número escolhido está correto"
-   }
-else if (numPedido > num){
-resultado ="O número escolhido é maior do que o número sorteado"
-
-}
-else if (numPedido < num){
-    resultado ="O número escolhido é menor do que o número sorteado"
-}
-else if (isNaN(num)) {
-    console.log("Valores Inválidos")
+   } else if (numPedido > num){
+        resultado ="O número escolhido é maior do que o número sorteado"
+    } else if (numPedido < num){
+    resultado = "O número escolhido é menor do que o número sorteado"
+    }
+    else if (isNaN(num)) {
+    resultado = "Valores Inválidos"
 }
     res.render('index', {resultado})
 })
