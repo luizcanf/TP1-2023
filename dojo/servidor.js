@@ -20,7 +20,9 @@ else if (numPedido > num){
 console.log("O número escolhido é maior do que o número sorteado")
 
 }
-else if ()
+else if (numPedido < num){
+    console.log("O O número escolhido é menor do que o número sorteado")
+}
     res.render('index', {})
 })
 
