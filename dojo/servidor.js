@@ -11,10 +11,8 @@ app.get('/', (request, response) => {
 })
 
 app.get('/acertei', (req, res) => {
-   const data = {
-     data.required.numPedido
-   }
- let resposta
+   let  numPedido = req.query.numPedido
+   
    if(num == numPedido){
     console.log("O número escolhido está correto")
    }
