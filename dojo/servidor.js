@@ -1,4 +1,4 @@
-var resultado
+
 const express = require('express')
 
 const app = express()
@@ -12,16 +12,17 @@ app.get('/', (request, response) => {
 
 app.get('/acertei', (req, res) => {
    let  numPedido = req.query.numPedido
-   
+   var resultado
+
    if(num == numPedido){
-    console.log("O número escolhido está correto")
+    resultado ="O número escolhido está correto"
    }
 else if (numPedido > num){
-console.log("O número escolhido é maior do que o número sorteado")
+resultado ="O número escolhido é maior do que o número sorteado"
 
 }
 else if (numPedido < num){
-    console.log("O número escolhido é menor do que o número sorteado")
+    resultado ="O número escolhido é menor do que o número sorteado"
 }
 else if (isNaN(num)) {
     console.log("Valores Inválidos")
