@@ -11,7 +11,13 @@ app.get('/', (request, response) => {
 })
 
 app.get('/acertei', (req, res) => {
-   
+   const data = {
+     data.required.numPedido
+   }
+
+   if(){
+    num
+   }
 
     res.render('index', {})
 })
