@@ -5,7 +5,7 @@ app.use(express.urlencoded({ extended: true }))
 let num = Math.floor((Math.random()*100)+1)
 
 app.get('/', (request, response) => {
-    response.render('index')
+    response.render('index')//views/index.ejs
 })
 
 app.get('/acertei', (req, res) => {
