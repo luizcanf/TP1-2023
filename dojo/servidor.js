@@ -7,7 +7,8 @@ app.set("view engine", "ejs")
 let num = Math.floor((Math.random()*100)+1)
 console.log(num);
 app.get('/', (request, response) => {
-    response.render('index')//views/index.ejs
+    resultado = ""
+    response.render('index', {resultado})//views/index.ejs
 })
 
 app.get('/acertei', (req, res) => {
