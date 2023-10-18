@@ -26,7 +26,7 @@ else if (numPedido < num){
 else if (isNaN(num)) {
     console.log("Valores Inválidos")
 }
-    res.render('index', {})
+    res.render('index', {resultado})
 })
 
 app.listen(8080)
