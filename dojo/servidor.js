@@ -16,9 +16,12 @@ app.get('/acertei', (req, res) => {
    }
  let resposta
    if(num == numPedido){
-    
+    console.log("O número escolhido está correto")
    }
+else if (numPedido > num){
+console.log("O n")
 
+}
     res.render('index', {})
 })
 
