@@ -14,9 +14,9 @@ app.get('/acertei', (req, res) => {
    const data = {
      data.required.numPedido
    }
-
-   if(){
-    num
+ let resposta
+   if(num == numPedido){
+    
    }
 
     res.render('index', {})
