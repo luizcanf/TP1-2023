@@ -1,4 +1,3 @@
-
 const express = require('express')
 
 const app = express()
@@ -23,8 +22,8 @@ app.get('/acertei', (req, res) => {
     }
     else if (isNaN(num)) {
     resultado = "Valores Inválidos"
-}
+    }
     res.render('index', {resultado})
-})
+    })
 
 app.listen(8080)
