@@ -5,7 +5,7 @@ app.use(express.urlencoded({ extended: true }))
 app.set("view engine", "ejs")
 
 let num = Math.floor((Math.random()*100)+1)
-
+console.log(num);
 app.get('/', (request, response) => {
     response.render('index')//views/index.ejs
 })
