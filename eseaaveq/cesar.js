@@ -1,7 +1,11 @@
 const port = 8080;
+const ip = Object.values(require('os').networkInterfaces()).reduce((r, list) => r.concat(list.reduce((rr, i) => rr.concat(i.family==='IPv4' && !i.internal && i.address || []), [])), [])[0]
 const express = require("express");
 const app = express();
 app.set('view engine', 'ejs');
+
+const cors = require('cors')
+app.use(cors())
 
 app.get("/", (request, response) => {
     response.render("index");
@@ -20,5 +24,5 @@ app.use((request, response, next) => {
 })
 
 app.listen(port, () => {
-    console.log(`Servidor funcionando. http://localhost:${port}`);
+    console.log(`Servidor funcionando. http://${ip}:${port}`);
 });
