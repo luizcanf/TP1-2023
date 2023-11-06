@@ -3,6 +3,7 @@ const ip = Object.values(require('os').networkInterfaces()).reduce((r, list) => 
 const express = require("express");
 const app = express();
 app.set('view engine', 'ejs');
+app.use(express.static('public'))
 
 const cors = require('cors')
 app.use(cors())
@@ -26,3 +27,13 @@ app.use((request, response, next) => {
 app.listen(port, () => {
     console.log(`Servidor funcionando. http://${ip}:${port}`);
 });
+
+/*
+var http = require('http');
+
+http.get({'host': 'api.ipify.org', 'port': 80, 'path': '/'}, function(resp) {
+  resp.on('data', function(ip) {
+    console.log("My public IP address is: " + ip);
+  });
+});
+ */
