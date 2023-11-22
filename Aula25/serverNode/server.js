@@ -5,7 +5,8 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'))
 
 app.get("/", (request, response) => {
-    response.render("soma4");
+    let result = ''
+    response.render("soma4", {result});
 });
 
 app.get("/soma", (request, response) => {
