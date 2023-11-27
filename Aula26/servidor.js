@@ -5,6 +5,9 @@ const app = express()
 app.use(express.urlencoded({ extended: true }))
 app.set("view engine", "ejs")
 
+// Otimizando a gravação com uso de um vetor
+let vetorNomes = []
+
 app.get('/', (request, response) => {
     resultado = ""
     response.render('index', { resultado })
@@ -19,7 +22,12 @@ app.post('/salvar', (req, res) => {
     let cadastro = {nome: nomeNoForm}
     console.log(cadastro);
     console.log('\n'+JSON.stringify(cadastro)+',');
-    fs.appendFileSync('nomes.json', `\n${JSON.stringify(cadastro)}`)
+    //fs.appendFileSync('nomes.json', `\n${JSON.stringify(cadastro)}`)
+    
+    // Adiciona o nome no vetor e salva o vetor no arquivo
+    vetorNomes.push(cadastro)
+    fs.writeFileSync('nomes.json', JSON.stringify(vetorNomes))
+
     resultado = `Olá, ${nomeNoForm}`
     res.render('index', { resultado })
 })
