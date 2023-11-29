@@ -14,6 +14,19 @@
     <li><%=vetorNomes[i].nome%></li>
     <% } %>
   </ul>
+
+  <table>
+    <tr>
+      <th>Nome</th>
+      <th>Idade</th>
+    </tr>
+    <% for (let i = 0; i < vetorNomes.length; i++) { %>
+      <tr>
+        <td><%=vetorNomes[i].nome%></td>
+        <td><%=vetorNomes[i].idade%></td>
+      </tr>
+    <% } %>
+  </table>
 </body>
 
 </html>
