@@ -7,6 +7,11 @@ app.set("view engine", "ejs")
 
 // Otimizando a gravação com uso de um vetor
 let vetorNomes = []
+if (fs.existsSync('nomes.json')) {
+    const dados = fs.readFileSync('nomes.json', 'utf-8')
+    console.log(dados);
+    vetorNomes = JSON.parse(dados)
+}
 
 app.get('/', (request, response) => {
     resultado = ""
