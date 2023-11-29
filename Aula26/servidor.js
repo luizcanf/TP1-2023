@@ -37,4 +37,8 @@ app.post('/salvar', (req, res) => {
     res.render('index', { resultado })
 })
 
+app.get('/mostrar', (req, res) => {
+    res.render('nomes', { vetorNomes })
+})
+
 app.listen(8080)
